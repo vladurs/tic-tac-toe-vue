@@ -7,32 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tic Tac Toe</title>
     <link type="text/css" href="index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+
   </head>
 
-  <body>
+  <body class="bg-gradient">
     <div id="app">
-      <h1 class="brand">Tic Tac Toe</h1>
       <div class="game-container">
         <div class="main-menu">
           <transition name="slide-fade">
-            <button @click="resetScreen" v-show="screen !== 0">Menu</button>
+            <button class="btn btn-jmek btn-lg" @click="resetScreen" v-show="screen !== 0">Menu</button>
             <h2 v-show="screen == 0">Welcome!</h2>
 
           </transition>
         </div>
-        <!-- <transition-group name="slide-fade-screen" tag="div"> -->
         <div class="screen" v-show="screen === 0" :key="0">
-          <h2>Tic Tac Toe Game</h2>
-          <button @click="skipScreen">New game</button>
+          <button class="btn btn-jmek btn-lg" @click="skipScreen">New game</button>
         </div>
         <div class="screen" v-show="screen === 1" :key="1">
           <h2>Choose option</h2>
           <div class="columns">
             <div>
-              <button @click="setGameType(true)">VS Computer</button>
+              <button class="btn btn-jmek btn-lg" @click="setGameType(true)">VS Computer</button>
             </div>
             <div>
-              <button @click="setGameType(false)">VS Player</button>
+              <button class="btn btn-jmek btn-lg" @click="setGameType(false)">VS Player</button>
             </div>
           </div>
           <div class="clearfix"></div>
@@ -41,10 +42,10 @@
           <h2>Player 1: Would you like to be X or O?</h2>
           <div class="columns">
             <div>
-              <button @click="setPlayerSymbol('X')">X</button>
+              <button class="btn btn-jmek btn-lg" @click="setPlayerSymbol('X')">X</button>
             </div>
             <div>
-              <button @click="setPlayerSymbol('O')">O</button>
+              <button class="btn btn-jmek btn-lg" @click="setPlayerSymbol('O')">O</button>
             </div>
           </div>
           <div class="clearfix"></div>
@@ -81,7 +82,7 @@
           <template v-else>
             <p>Draw! </p>
           </template>
-          <button @click="startGame">Replay!</button>
+          <button class="btn btn-jmek btn-lg" @click="startGame">Replay!</button>
         </div>
       </div>
     </div>
